@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 * body {
-  font-size: 25px;
+  font-size: 32px;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -19,19 +19,65 @@
 }
 * body .container {
   display: flex;
-  max-width: 900px;
+  max-width: 1000px;
   position: relative;
-  background: url("/images/pattern-quotes.svg") top left no-repeat;
-  background-size: auto;
 }
 * body .container .text-section {
   position: relative;
   padding: 3rem 0;
   display: block;
   margin: auto;
+  left: 6.4rem;
+  z-index: 1;
+}
+* body .container .text-section .quote-img {
+  position: absolute;
+  left: 3rem;
+}
+* body .container .text-section .user {
+  display: flex;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+* body .container .text-section .user span {
+  margin-left: 10px;
 }
 * body .container .image-section {
-  background: url("/images/pattern-bg.svg") top right no-repeat;
-  background-size: cover;
   padding: 3rem;
+  position: relative;
+}
+* body .container .image-section .bg-img {
+  position: absolute;
+  width: 450px;
+  top: 0rem;
+  left: 0;
+  z-index: -1;
+}
+* body .container .image-section .buttons {
+  position: absolute;
+  display: flex;
+  bottom: 3rem;
+  left: 4rem;
+}
+
+@media screen and (max-width: 880px) {
+  body {
+    display: block;
+    margin: auto;
+  }
+  body .container {
+    flex-direction: column-reverse;
+    padding: 3rem;
+    text-align: center;
+  }
+  body .container .text-section {
+    left: 0;
+  }
+  body .container .image-section {
+    padding: 0;
+  }
+  body .container .image-section .bg-img {
+    margin: auto;
+  }
 }/*# sourceMappingURL=styles.css.map */
