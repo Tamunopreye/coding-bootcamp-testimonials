@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
 :root {
   --DarkBlue: hsl(240, 38%, 20%);
   --GrayishBlue: hsl(240, 18%, 77%);
@@ -9,7 +10,8 @@
   box-sizing: border-box;
 }
 * body {
-  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -18,12 +20,6 @@
   align-items: center;
   position: relative;
 }
-* body .curve {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 * body .container {
   display: flex;
   max-width: 1000px;
@@ -31,6 +27,7 @@
 }
 * body .container .text-section {
   position: relative;
+  font-weight: 300;
   padding: 3rem 0;
   display: block;
   margin: auto;
@@ -40,7 +37,7 @@
 * body .container .text-section .quote-img {
   position: absolute;
   left: 3rem;
-  top: -2px;
+  top: 0;
 }
 * body .container .text-section .user {
   display: flex;
@@ -48,25 +45,56 @@
   font-size: 1rem;
   font-weight: 700;
 }
+* body .container .text-section .user p {
+  color: var(--DarkBlue);
+}
 * body .container .text-section .user span {
+  color: var(--GrayishBlue);
   margin-left: 10px;
 }
 * body .container .image-section {
-  padding: 3rem;
   position: relative;
+  padding: 3rem;
 }
 * body .container .image-section .bg-img {
   position: absolute;
   width: 450px;
-  top: 0rem;
+  top: 0;
   left: 0;
   z-index: -1;
 }
 * body .container .image-section .buttons {
   position: absolute;
   display: flex;
-  bottom: 3rem;
+  bottom: 2.3rem;
   left: 4rem;
+  z-index: 12;
+  border-radius: 1rem;
+  overflow: auto;
+}
+* body .container .image-section .buttons button {
+  background-color: #fff;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: all 1s ease-in-out;
+}
+* body .container .image-section .buttons button:hover {
+  background-color: var(--DarkBlue);
+}
+* body .curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  z-index: -10;
+}
+* body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+* body .attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media screen and (max-width: 800px) {
@@ -91,7 +119,7 @@
   }
   body .container .text-section .user {
     display: block;
-    margin-top: 1rem;
+    margin-top: 4rem;
     font-size: 1.3rem;
     font-weight: 700;
   }
@@ -104,7 +132,20 @@
   body .container .image-section .bg-img {
     width: 100%;
   }
-  body .container .image-section .user-img {
+  body .container .image-section #user-img {
     max-width: 100%;
+  }
+  body .container .image-section .buttons {
+    left: 7.5rem;
+    bottom: 1.2rem;
+  }
+  body .curve {
+    width: 100%;
+  }
+  body .attribution {
+    font-size: 11px;
+    position: absolute;
+    bottom: 1rem;
+    left: 4rem;
   }
 }/*# sourceMappingURL=styles.css.map */
