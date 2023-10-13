@@ -4,7 +4,7 @@ console.log("Hello World");
 // Sample data for slides
 const slides = [
     {
-        imageSrc: "/images/image-tanya.jpg",
+        imageSrc: "images/image-tanya.jpg",
         quote: `" I've been intrested in coding for a while but never
     taken the jump, until now. I couldnt' recommend this
     course enough. I'm now in the job of my dreams and so
@@ -13,7 +13,7 @@ const slides = [
         profession: "UX Engineer",
     },
     {
-        imageSrc: "/images/image-john.jpg",
+        imageSrc: "images/image-john.jpg",
         quote: `" If you want to lay the best foundation possible I'd recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. "`,
         user: "John Tarkpor",
         profession: "Junior Front-end Developer",
